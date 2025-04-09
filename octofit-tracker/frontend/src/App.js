@@ -5,6 +5,7 @@ import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
 import Users from './components/Users';
 import Workouts from './components/Workouts';
+import Home from './components/Home';
 import './App.css';
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
         </nav>
         <div className="container mt-4">
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/activities" element={<Activities />} />
             <Route path="/leaderboard" element={<Leaderboard />} />
             <Route path="/teams" element={<Teams />} />
@@ -47,6 +49,9 @@ const App = () => {
             <Route path="/workouts" element={<Workouts />} />
           </Routes>
         </div>
+        <footer style={{ textAlign: 'center', padding: '1em', background: '#f1f1f1', marginTop: '2em' }}>
+          App was created by Lanre Adetola, Student of Thomas More University (Mechelen,Belgium).
+        </footer>
       </div>
     </Router>
   );
